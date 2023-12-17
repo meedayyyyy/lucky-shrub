@@ -12,6 +12,8 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "head nav" "main main" "footer footer";
   height: 100vh;
+  font-family: "league spartan";
+  font-size: 18px;
 }
 
 div img {
@@ -60,6 +62,4 @@ main {
 footer {
   grid-area: footer;
   padding: 20px 0;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

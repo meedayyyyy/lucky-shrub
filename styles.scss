@@ -14,9 +14,10 @@ $default-margin: 20px auto;
 body{
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 'head nav'
+    // grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 'head head'
+    'nav nav'
     'main main'
     'footer footer';
     height: 100vh;
@@ -41,33 +42,49 @@ a{
     color: $text-color;
 }
 // header
-.logo{
+header{
     grid-area: head;
-    margin: 20px 0;
-    height: 100px;
+    display: flex;
+justify-content: center;
+width: 100%;
+height: 100px;
+margin: 20px 0;
 }
+
 
 nav{
     grid-area: nav;
+    margin-bottom: 20px;
     ul{
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100%; 
+        width: 50%;
+        margin: 0 auto;
+        padding: 16px 64px;
+        border: 2px solid #113C3830;
+        border-radius: 50px;
+    }
+
+    li:hover{
+        font-family: 'henny penny';
+        animation: enlarge-text 5s linear;
+        transform: scale(1.05);
+        background-color: #F2542D20;
+        border-radius: 50px;
     }
 
     li a:hover{
-        font-family: 'henny penny';
         color: $secondary-color;
-        animation: enlarge-text 5s ease;
     }
 }
-@keyframes enlarge-text {
-    from{        transform: scale(0);
-    }
-    to{        transform: scale(2);
-    }
-}
+// @keyframes enlarge-text {
+//     from{        transform: scale(0);
+//     }
+//     to{        transform: scale(6);
+//     }
+// }
 
 // main
 main{

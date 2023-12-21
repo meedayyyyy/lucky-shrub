@@ -42,6 +42,11 @@ margin: 16px 0;
 a{
     color: $text-color;
 }
+img{
+    // width: 600px;
+    max-width: 100%;
+    // flex-shrink: 1;
+}
 // header
 header{
     grid-area: head;
@@ -109,13 +114,12 @@ main{
         }
        
     }
+    img{
+        min-width: 600px;
+    }
 }
 
- img{
-    // width: 600px;
-    max-width: 100%;
-    flex-shrink: 1;
-}
+ 
 
 
 .info{
@@ -123,12 +127,14 @@ main{
     justify-content: space-around;
     margin: $default-margin;
     article{
-        // flex: auto;
-        img{
-            flex-shrink: 1;
+        flex: 1;
+        .prom-image{
+            display: flex;
+            justify-content: center;
             height: 200px;
-   
+
         }
+        
     }
 }
 
@@ -164,6 +170,9 @@ main{
 }
 .about{
     @include container;
+    img{
+        min-width: 500px;
+    }
 }
 // footer
 footer{
@@ -181,10 +190,11 @@ footer{
 //mobile
 @media(max-width: 500px){
     body{
-        margin: 0 5%;
+        margin: 0 auto;
+        padding: 0 8px;
     }
     header{
-height: 60px;
+height: 80px;
 
     }
 nav ul{
@@ -198,9 +208,34 @@ nav ul{
         flex-direction: column;
     h1{
         font-size: 40px;
+        text-align: center;
     }
     p{
         font-size: 18px;
     }
+    img{
+        min-width: auto;
+    }
+    }
+    .promotion{
+        flex-direction: column;
+        h3{
+            font-size: 24px;
+        }
+        img{
+            height: auto;
+        }
+        .prom-image img{
+            width: 100%;
+        }
+    }
+    #terms{
+        margin-top: 8px;
+    }
+    .info, .about{
+        flex-direction: column;
+        img{
+            min-width: auto;
+        }
     }
 }

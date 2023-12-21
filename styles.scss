@@ -14,7 +14,7 @@ $default-margin: 20px auto;
 body{
     margin: 0 auto;
     display: grid;
-    // grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto auto 1fr auto;
     grid-template-areas: 'head head'
     'nav nav'
@@ -24,6 +24,7 @@ body{
     width: 90vw;
     color: $text-color;
     line-height: 1.5em;
+    overflow: none;
 
     h1,h2,h3{
         color: $primary-color;
@@ -54,7 +55,7 @@ margin: 20px 0;
 
 nav{
     grid-area: nav;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     ul{
         display: flex;
         justify-content: space-between;
@@ -65,6 +66,7 @@ nav{
         padding: 16px 64px;
         border: 2px solid #113C3830;
         border-radius: 50px;
+        background-color: #113C3808;
     }
 
     li:hover{
@@ -79,12 +81,6 @@ nav{
         color: $secondary-color;
     }
 }
-// @keyframes enlarge-text {
-//     from{        transform: scale(0);
-//     }
-//     to{        transform: scale(6);
-//     }
-// }
 
 // main
 main{
@@ -101,21 +97,23 @@ main{
     h1{
         font: {
             family: 'henny penny';
-            size: 72px;
+            size: 64px;
         } 
         color: $primary-color ;
         line-height: 1.25em;
+        margin-bottom: 16px;
     }
     p{
         font: {
-            size: 24px;
+            size: 20px;
         }
        
     }
 }
 
-.hero-image img{
-    width: 600px;
+ img{
+    // width: 600px;
+    max-width: 100%;
     flex-shrink: 1;
 }
 
@@ -145,11 +143,24 @@ main{
 
 .promotion{
     @include container;
-    background-color: #113C3810;
+    // background-color: #113C3810;
+    background-color: #113C3808;
+    border: 2px solid #113C3830;
     padding: 20px;
     border-radius: 16px;
     justify-content: space-evenly;
     margin: 80px 0;
+    h3{
+        font-size: 32px;
+        padding-bottom: 8px;
+    }
+}
+
+#terms {
+    a {
+        color: $secondary-color;
+    }
+    margin-top: 40px
 }
 .about{
     @include container;
@@ -164,5 +175,32 @@ footer{
     align-items: center;
     .logo{
         height: 80px;
+    }
+}
+
+//mobile
+@media(max-width: 500px){
+    body{
+        margin: 0 5%;
+    }
+    header{
+height: 60px;
+
+    }
+nav ul{
+    flex-direction: column;
+    width: 50%;
+        margin: 0 auto;
+        padding: 16px;
+        border-radius: 16px;
+    }
+    .hero{
+        flex-direction: column;
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: 18px;
+    }
     }
 }

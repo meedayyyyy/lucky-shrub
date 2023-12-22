@@ -99,7 +99,8 @@ main {
 
 .info {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 24px;
   margin: 20px auto;
 }
 .info article {
@@ -109,6 +110,10 @@ main {
   display: flex;
   justify-content: center;
   height: 200px;
+  background-color: rgba(17, 60, 56, 0.062745098);
+  border-radius: 16px;
+  margin-bottom: 8px;
+  padding: 4px;
 }
 
 .promotion {
@@ -144,9 +149,13 @@ main {
   justify-content: space-between;
   min-height: 200px;
   margin: 20px auto;
+  width: 70%;
+  margin-top: 120px;
+  align-items: flex-start;
+  flex-direction: row-reverse;
 }
 .about img {
-  min-width: 500px;
+  min-width: 300px;
 }
 
 footer {
@@ -206,6 +215,7 @@ footer .logo {
   }
   .info, .about {
     flex-direction: column;
+    width: 100%;
   }
   .info img, .about img {
     min-width: auto;

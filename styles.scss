@@ -124,7 +124,8 @@ main{
 
 .info{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 24px;
     margin: $default-margin;
     article{
         flex: 1;
@@ -132,6 +133,10 @@ main{
             display: flex;
             justify-content: center;
             height: 200px;
+            background-color: #113C3810;
+            border-radius: 16px;
+            margin-bottom: 8px;
+            padding: 4px;
 
         }
         
@@ -170,8 +175,12 @@ main{
 }
 .about{
     @include container;
+    width: 70%;
+    margin-top: 120px;
+    align-items: flex-start;
+    flex-direction: row-reverse;
     img{
-        min-width: 500px;
+        min-width: 300px;
     }
 }
 // footer
@@ -234,6 +243,7 @@ nav ul{
     }
     .info, .about{
         flex-direction: column;
+        width: 100%;
         img{
             min-width: auto;
         }

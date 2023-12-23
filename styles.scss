@@ -14,10 +14,9 @@ $default-margin: 20px auto;
 body{
     margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: 'head head'
-    'nav nav'
+    grid-template-columns: minmax(80px, 100px) auto;
+    grid-template-rows: auto  1fr auto;
+    grid-template-areas: 'head nav'
     'main main'
     'footer footer';
     height: 100vh;
@@ -60,19 +59,23 @@ margin: 20px 0;
 
 nav{
     grid-area: nav;
-    margin-bottom: 60px;
+    height: 100px;
+    margin: 20px 0;
+    display: flex;
+align-items: center;
     ul{
         display: flex;
+        column-gap: 32px;
         justify-content: space-between;
         align-items: center;
-        height: 100%; 
-        width: 50%;
+        width: auto;
         margin: 0 auto;
         padding: 16px 64px;
         border: 2px solid #113C3830;
         border-radius: 50px;
         background-color: #113C3808;
     }
+    
 
     li:hover{
         font-family: 'henny penny';
@@ -182,6 +185,15 @@ main{
     img{
         min-width: 300px;
     }
+}
+
+.link-btn{
+    padding: 12px 24px;
+    margin: 20px 0;
+    border-radius: 32px;
+    border: none;
+    background-color: $secondary-color;
+    color: #fff;
 }
 // footer
 footer{

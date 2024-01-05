@@ -1,21 +1,14 @@
-var sentence ="hELlo THERE, hOW ARE yOu doINg?"
-// console.log(sentence)
-var newSentence = function(word){
-    var first = word[0]
-    var last = word.slice(1)
-    console.log(first.toUpperCase() + last.toLowerCase())
-}
-// newSentence(sentence)
-// console.log(sentence[0].toUpperCase() + sentence.slice(1).toLowerCase())
-
-// newSentence("mArYam")
-
-var pass = function(age, accompanied){
-    if(age <= 12 && accompanied === true){
-        console.log("You are allowed to go in")
-    } else {
-        console.log("You're not allowed to go in")
-    }
-}
-
-pass(15, true)
+// const mediaQuery = window.matchMedia('(max-width: 599px)');
+// const close = document.querySelector('#close-btn');
+// const menu = document.querySelector('#menu')
+// function displayMenu(){
+//     menu.style.display = 'flex'
+//     close.style.display = 'none'
+// }
+// if(mediaQuery.matches){
+//     close.style.display = "inline"
+//     close.onclick = displayMenu;
+// } else {
+//     close.style.display = "none"
+   
+// }

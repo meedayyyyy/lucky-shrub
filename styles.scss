@@ -4,7 +4,12 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
+    ::selection{
+        background: #113C3840;
+        color: #113C38;
+    }
 }
+
 
 $primary-color: #113C38;
 $secondary-color: #F2542D;
@@ -75,7 +80,13 @@ align-items: center;
         border-radius: 50px;
         background-color: #113C3808;
     }
-    
+    .close-btn{
+       cursor: pointer;
+       background: none;
+       border: none;
+       padding: 12px;
+       display: none;
+    }
 
     li:hover{
         font-family: 'henny penny';
@@ -104,7 +115,7 @@ main{
     // width: 100vw;
     h1{
         font: {
-            family: 'henny penny';
+            family: 'henny penny', 'league spartan', 'arial', san-serif;
             size: 64px;
         } 
         color: $primary-color ;
@@ -209,21 +220,30 @@ footer{
 }
 
 //mobile
-@media(max-width: 500px){
+@media screen and (max-width: 599px){
     body{
-        margin: 0 auto;
+        // margin: 0 auto;
         padding: 0 8px;
     }
     header{
 height: 80px;
 
     }
-nav ul{
+    nav{
+        height: auto;
+align-items: flex-start;
+justify-content: flex-end;  
+ }
+ 
+#menu{
+    display: none;
     flex-direction: column;
     width: 50%;
-        margin: 0 auto;
-        padding: 16px;
-        border-radius: 16px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: inherit;
+        align-items: flex-end;
     }
     .hero{
         flex-direction: column;
@@ -246,9 +266,7 @@ nav ul{
         img{
             height: auto;
         }
-        .prom-image img{
-            width: 100%;
-        }
+    
     }
     #terms{
         margin-top: 8px;
@@ -259,5 +277,58 @@ nav ul{
         img{
             min-width: auto;
         }
+    }
+}
+.close-btn{
+    display: block;
+}
+//tablet
+@media(min-width: 600px) and (max-width: 1000px) {
+    .hero{
+        
+        h1{
+            font-size: 48px;
+        }
+        
+        img{
+            min-width: 350px;
+        }
+    }
+    .promotion{
+        padding: 24px;
+        column-gap: 20px;
+        h3{
+            font-size: 28px;
+        }
+        img{
+            height: auto;
+        }
+    }
+    #terms {
+    
+        margin-top: 20px
+    }
+    .info{
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        margin: $default-margin;
+        article{
+            flex: 1;
+            .prom-image{
+                display: flex;
+                justify-content: center;
+                height: 150px;
+                background-color: #113C3810;
+                border-radius: 16px;
+                margin-bottom: 8px;
+                padding: 4px;
+    
+            }
+            
+        }
+    }
+    .about{
+        width: 100%;
     }
 }
